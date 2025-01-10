@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinesh Gulati - CV</title>
+    <meta name="description" content="Portfolio of Dinesh Gulati, a Ph.D. student in Water Resources with expertise in GIS, machine learning, and sustainable agriculture.">
+    <meta name="keywords" content="Dinesh Gulati, HydroAgriNexus, GIS, machine learning, sustainable agriculture, water resources">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --link-color: #17a2b8;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --link-color: #0dcaf0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        .section-title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--link-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .profile-pic {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .download-btn {
+            margin-top: 1rem;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .btn-outline-dark {
+            border-color: var(--link-color);
+        }
+
+        .btn-outline-dark:hover {
+            background-color: var(--link-color);
+            color: var(--bg-color);
+        }
+
+        .btn-outline-info:hover {
+            background-color: var(--link-color);
+            color: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <div class="theme-toggle">
+        <button class="btn btn-outline-secondary btn-sm" onclick="toggleTheme()">
+            <i class="fas fa-adjust"></i> Toggle Theme
+        </button>
+    </div>
+
+    <div class="container mt-4">
+        <header class="text-center">
+            <img src="../assets/images/Profile_pic.jpeg" alt="Dinesh Gulati" class="profile-pic">
+            <h1>Dinesh Gulati</h1>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:gula7530@vandals.uidaho.edu">gula7530@vandals.uidaho.edu</a></p>
+            <p><i class="fas fa-phone"></i> +1 814 826 5770</p>
+            <div class="mt-3">
+                <a href="https://www.linkedin.com/in/dinesh-gulati-120779149/" target="_blank" class="btn btn-outline-info btn-sm me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/dineshgulati933" target="_blank" class="btn btn-outline-dark btn-sm me-2"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://dineshgulati933.github.io/digital-agri-blog/" target="_blank" class="btn btn-outline-success btn-sm me-2"><i class="fas fa-blog"></i> Blog</a>
+                <a href="javascript:downloadPDF();" class="btn btn-outline-primary btn-sm download-btn"><i class="fas fa-file-download"></i> Download CV</a>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">About Me</h2>
+            <div class="highlight">
+                <p>A dedicated Ph.D. student with expertise in water resources, GIS applications, and machine learning. Passionate about integrating technology with sustainable agriculture and water management solutions. Aspires to leverage interdisciplinary skills to address global water challenges.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            <ul class="list-unstyled">
+                <li><strong>Ph.D. in Water Resources</strong> - University of Idaho (2024 (transferred in) - Present)
+                    <ul>
+                        <li><strong>GPA:</strong> 4.0/4.0</li>
+                        <li><strong>Advisor:</strong> Dr. Meetpal Kukal</li>
+                        <li>Research: Impact of soil organic carbon on crop water uptake.</li>
+                    </ul>
+                </li>
+                <li><strong>Ph.D. in Agricultural & Biological Engineering</strong> - The Pennsylvania State University (2023 - 2024 (transferred))
+                    <ul>
+                        <li><strong>GPA:</strong> 4.0/4.0</li>
+                        <li><strong>Advisor:</strong> Dr. Meetpal Kukal</li>
+                    </ul>
+                </li>
+                <li><strong>M.Tech in Soil and Water Engineering</strong> - Punjab Agricultural University (2021)
+                    <ul>
+                        <li><strong>OCPA:</strong> 8.29/10</li>
+                        <li><strong>Thesis:</strong> Simulation of groundwater recharge from transplanted and direct seeded rice fields <a href="https://krishikosh.egranth.ac.in/handle/1/5810177319" target="_blank">[Link]</a></li>
+                        <li><strong>Advisor:</strong> Dr. Sanjay Satpute</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Research Interests</h2>
+            <ul>
+                <li>Remote Sensing and GIS-based applications for water resources</li>
+                <li>Machine learning applications in agriculture</li>
+                <li>Irrigation water management</li>
+                <li>Monitoring and modeling of soil water in an unsaturated zone</li>
+                <li>Integrating microcontroller-based sensors for water management</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Research Experience</h2>
+            <div>
+                <h5>Graduate Research Assistant</h5>
+                <p><i>Penn State & University of Idaho</i> | Aug 2023 - Present</p>
+                <ul>
+                    <li>Evaluating the impact of soil organic carbon on water content and crop uptake.</li>
+                    <li>Developed machine learning models for predicting ETo conversion factors.</li>
+                    <li>Working on a framework for Integrating the simulation, remote sensing, and on-field sensors to understand the soil-water-plant relationship.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>Senior Research Fellow</h5>
+                <p><i>Department of Soil Sciences, PAU</i> | May 2021 - May 2022</p>
+                <ul>
+                    <li>Planning and managing field experiments under micro irrigation systems in open fields and under-protected structures</li>
+                    <li>Developed numerous low-cost microcontroller-based sensors to observe climate and agriculture parameters</li>
+                    <li>Coordinate with other Ph.D. and Masters students to assist them in their research</li>
+                    <li>Conduct on-field practical classes for Bachelor students</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Publications</h2>
+            <ul class="list-unstyled">
+                <li>Thorp, K. R., <b>Gulati, D.</b>, Kukal, M., et al. (2024). Version 1.3.0 pyfao56: FAO-56 evapotranspiration in Python. <i>SoftwareX</i>. <a href="https://doi.org/10.1016/j.softx.2024.101724" target="_blank">[DOI]</a></li>
+                <li>Singla, P., Sharda, R., Sharma, S., <b>Gulati, D.,</b> Pandey, K., Navprem, S., ... & Sharma, A. (2023). Variation in physio-chemical attributes and WUE during growth and development of Pak choi (Brassica rapa L. subsp. chinensis L.) under different drip fertigation and mulching treatments. <i>Acta Alimentaria,</i> 52(3), 458-468. <a href ="https://doi.org/10.1556/066.2023.00084" target="_blank">[DOI]</a></li>
+                <li><b>Gulati, D.,</b> Satpute, S., Kaur, S., & Aggarwal, R. (2022). Estimation of potential recharge through direct seeded and transplanted rice fields in semi-arid regions of Punjab using HYDRUS-1D. <i>Paddy and Water Environment</i>, 1-14. <a href ="https://doi.org/10.1007/s10333-021-00876-1" target="_blank">[DOI]</a></li>
+            </section>
+            </ul>
+        </section>
+
+        <section class="section--page">
+            <h2 class="section-title">Conferences and Presentations</h2>
+            <ul>
+                <li>Presented Oral presentations in ASA, CSSA, & SSSA conference 2024 held in San Antonio, TX</li>
+                <li>Presented Oral and poster presentations in ASABE’s AIM 2024 held in Anaheim, CA</li>
+                <li>Presented Oral and poster presentations in NABEC 2024 held in State College, PA</li>
+                <li>Attended ET Symposium held in State College, PA</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Honors and Awards</h2>
+            <ul>
+                <li>Recipient of Whiting Scholorship of $1000 in 2024</li>
+                <li>Selected as irrigation E3 student and sponsered to attend Irrigation Conference and Education Show</li>
+                <li>Gold Medalist for top performance in M.Tech</li>
+                <li>ISTE national award for best M.Tech thesis in Agricultural Engineering</li>
+                <li>Recipient of merit Certificate in Postgraduate degree</li>
+                <li>Recipient of merit scholarship in masters and Bachelor</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Training</h2>
+            <ul>
+                <li>Completed a three-day APSIM workshop on crop management simulation.</li>
+                <li>Specialization in Deep Learning by deeplearning.ai on Coursera <a href="https://www.coursera.org/account/accomplishments/specialization/VJJ5Z7TCK32H" target="_blank">[Certificate]</a>.</li>
+                <li>Machine Learning with Python course & fundamentals of R-programming on Udemy <a href="https://www.udemy.com/certificate/UC-6270cbac-82b7-4aa1-9d7f-6ab99c092e96/" target="_blank">[Certificate]</a>
+                    <a href="https://www.udemy.com/certificate/UC-5af4c329-ccc7-4e65-9765-97b3cde8e090/" target="_blank">[Certificate]</a>.</li>
+                <li>Attended IoT workshop on precision farming by NCPAH, Ministry of Agriculture, India.</li>
+            </ul>
+        </section>        
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <ul>
+                <li><strong>Programming:</strong> Python (Data Analysis, Machine Learning, Deep Learning), R</li>
+                <li><strong>Tools:</strong> HYDRUS, ArcGIS, Google Earth Engine, CROPWAT</li>
+                <li><strong>IoT Development:</strong> Arduino, NordMCU</li>
+                <li><strong>Other:</strong> Microsoft Office Suite</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">References</h2>
+            <ul class="list-unstyled">
+                <li>
+                    <strong>Dr. Meetpal Kukal</strong><br>
+                    Assistant Professor, Department of Soil and Water Systems<br>
+                    University of Idaho, USA<br>
+                    Email: <a href="mailto:mkukal@uidaho.edu">mkukal@uidaho.edu</a><br>
+                    Phone: +1 402 219 3969
+                </li>
+                <li>
+                    <strong>Dr. Sanjay Satpute</strong><br>
+                    Scientist, Department of Soil and Water Engineering<br>
+                    Punjab Agricultural University, India<br>
+                    Email: <a href="mailto:sanjay4471@pau.edu">sanjay4471@pau.edu</a><br>
+                    Phone: +91 947 806 9067
+                </li>
+            </ul>
+        </section>
+        
+        <!-- <footer class="text-center mt-4">
+            <p>&copy; 2024 Dinesh Gulati. All rights reserved.</p>
+        </footer> -->
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function downloadPDF() {
+            const element = document.querySelector('.container');
+            const options = {
+                margin: 1,
+                filename: 'Dinesh_Gulati_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(options).from(element).save();
+        }
+
+        // Fetch Navbar
+        fetch('/navbar.html') // Root-relative path for consistency
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to load navbar');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // Highlight the current page link
+                const currentPath = window.location.pathname;
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error loading navbar:', error);
+                document.getElementById('navbar-placeholder').innerHTML = `
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container">
+                            <a class="navbar-brand" href="/index.html">HydroAgriNexus</a>
+                        </div>
+                    </nav>`;
+            });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>
