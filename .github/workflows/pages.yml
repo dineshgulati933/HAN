@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger workflow on pushes to the main branch
+      - main
 
 jobs:
   build:
@@ -25,6 +25,9 @@ jobs:
 
     - name: Generate static site
       run: python render_static.py
+
+    - name: Add CNAME file
+      run: echo "hydroagrinexus.com" > build/CNAME
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

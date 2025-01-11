@@ -1,6 +1,12 @@
 import sys
 import os
 from app import app
+import shutil
+
+# Copy CNAME file to the build directory
+shutil.copyfile("static/CNAME", "build/CNAME")
+print("CNAME file added to build directory")
+
 
 # Output directory for static files
 output_dir = "build"
