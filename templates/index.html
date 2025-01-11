@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Home - HydroAgriNexus{% endblock %}
+
+{% block content %}
+<header class="bg-primary text-white text-center py-3">
+    <h1>HydroAgriNexus</h1>
+    <p>Your Gateway to Water Resources and Agricultural Insights</p>
+</header>
+
+<main class="container py-4">
+    <section class="project-section">
+        <h2 class="text-center">Explore My Projects</h2>
+        <p class="text-center">Discover innovative projects in GIS, Python, Arduino, and IoT that address real-world challenges.</p>
+        <div class="row">
+            <!-- GIS Projects -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="../static/images/gis_projects.webp" alt="GIS Projects" class="card-img-top project-image">
+                    <div class="card-body">
+                        <h5 class="card-title">GIS Projects</h5>
+                        <p class="card-text">Explore projects that leverage Geographic Information Systems (GIS) to solve water and agriculture challenges.</p>
+                        <a href="gis_projects" class="btn btn-primary">View GIS Projects</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Projects -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="../static/images/python_projects.webp" alt="Python Projects" class="card-img-top project-image">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Projects</h5>
+                        <p class="card-text">Innovative Python applications focusing on data analysis, machine learning, and automation.</p>
+                        <a href="pages/python.html" class="btn btn-primary">View Python Projects</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arduino & IoT Projects -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="../static/images/iot_projects.webp" alt="IoT Projects" class="card-img-top project-image">
+                    <div class="card-body">
+                        <h5 class="card-title">Arduino & IoT</h5>
+                        <p class="card-text">Discover smart solutions using Arduino and IoT for efficient water and agricultural management.</p>
+                        <a href="pages/iot.html" class="btn btn-primary">View IoT Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
