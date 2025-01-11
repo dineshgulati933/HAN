@@ -4,7 +4,7 @@ from app import app
 import shutil
 
 # Copy CNAME file to the build directory
-shutil.copyfile("static/CNAME", "build/CNAME")
+shutil.copyfile("build/static/CNAME", "build/CNAME")
 print("CNAME file added to build directory")
 
 
