@@ -1,5 +1,57 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #17a2b8;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --link-color: #0dcaf0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+.section-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--link-color);
+    padding-bottom: 0.5rem;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.download-btn {
+    margin-top: 1rem;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.btn-outline-dark {
+    border-color: var(--link-color);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+}
+
+.btn-outline-info:hover {
+    background-color: var(--link-color);
+    color: var(--bg-color);
 }
