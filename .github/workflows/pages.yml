@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger the workflow on pushes to the main branch
+      - main  # Trigger workflow on pushes to the main branch
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.x  # Use Python 3.x
+        python-version: 3.x
 
     - name: Install dependencies
       run: |
@@ -30,4 +30,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build  # Specify the directory to deploy
+        publish_dir: ./build
