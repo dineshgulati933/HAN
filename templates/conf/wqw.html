@@ -3,11 +3,28 @@
 {% block title %}WQW - HydroAgriNexus{% endblock %}
 
 {% block content %}
-<h1>Idaho Water Quality Workshop</h1>
-<p>Download the poster or run the soil water balance simulation</p>
-<ul>
-    <li><a href="https://dinesh933.pythonanywhere.com/approach2_params">NRCS CPS based SWB model</a></li>
-    <li><a href="../static/images/poster.png" target="_blank"><img src="../static/images/poster.png" alt="IWQW poster" style="max-width: 100%; height: auto;"></a></li>
+<div class="container mt-4 text-center">
+    <h1 class="mb-4">Idaho Water Quality Workshop</h1>
+    <p class="lead">Explore our research and soil water balance simulation model.</p>
 
-</ul>
+    <!-- Simulation Link Section -->
+    <div class="mt-4">
+        <h3>Run the Soil Water Balance Simulation</h3>
+        <p>
+            Try out the <strong>NRCS CPS based SWB model</strong> for simulating soil water balance.
+        </p>
+        <a href="https://dinesh933.pythonanywhere.com/approach2_params" target="_blank" class="btn btn-primary btn-lg">
+            <i class="fas fa-play-circle"></i> Launch Simulation
+        </a>
+    </div>
+
+    <!-- Research Poster Section -->
+    <div class="mt-5">
+        <h3>Research Poster</h3>
+        <p>Click below to view and download the poster.</p>
+        <a href="/static/images/WQW_poster.png.png" target="_blank">
+            <img src="/static/images/WQW_poster.png" alt="IWQW Poster" class="img-fluid shadow-lg" style="max-width: 80%; height: auto; border-radius: 8px;">
+        </a>
+    </div>
+</div>
 {% endblock %}
