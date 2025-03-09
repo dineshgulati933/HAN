@@ -10,9 +10,9 @@ def home():
 def cv():
     return render_template("cv.html")
 
-# @app.route("/apps")
-# def apps():
-#     return render_template("apps.html")
+@app.route("/about")
+def apps():
+    return render_template("about.html")
 
 @app.route("/gis")
 def gis_projects():

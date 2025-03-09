@@ -20,6 +20,7 @@ pages = {
     "index.html": "/",
     "cv.html": "/cv",
     "apps.html": "/apps",
+    "about.html": "/about",
     "gis_projects.html": "/gis",
     "gis/project1.html": "/gis/project1",
     "gis/project2.html": "/gis/project2",
