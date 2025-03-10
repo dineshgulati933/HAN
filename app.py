@@ -11,7 +11,7 @@ def cv():
     return render_template("cv.html")
 
 @app.route("/about")
-def apps():
+def about():
     return render_template("about.html")
 
 @app.route("/gis")
