@@ -33,6 +33,9 @@ def conf():
 @app.route("/conf/wqw")
 def wqw():
     return render_template("conf/wqw.html")
+@app.route("/conf/pnw_ws24")
+def pnw_ws24():
+    return render_template("conf/pnw_ws24.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

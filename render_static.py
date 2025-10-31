@@ -26,6 +26,7 @@ pages = {
     "gis/project2.html": "/gis/project2",
     "conf.html": "/conf",
     "conf/wqw.html": "/conf/wqw",
+    "conf/pnw_ws24.html": "/conf/pnw_ws24",
 }
 
 # Render pages
