@@ -3,11 +3,298 @@
 {% block title %}Conferences - HydroAgriNexus{% endblock %}
 
 {% block content %}
-<h1>Conferences & Presentations</h1>
-<p>Explore past and upcoming conferences:</p>
-<ul>
-    <li><a href="/conf/wqw">Idaho Water Quality Workshop</a></li>
-    <li><a href="/conf/pnw_ws24">Pacific Northwest Water Summit</a></li>
-    <!-- <li><a href="/gis/project2">Project 2: GIS Mapping for Agriculture</a></li> -->
-</ul>
+<!-- Page Header -->
+<section class="bg-primary text-white text-center py-5 mb-5">
+    <div class="container">
+        <h1 class="display-4 mb-3">Conferences & Presentations</h1>
+        <p class="lead">Academic presentations, posters, and research dissemination at national and international conferences</p>
+    </div>
+</section>
+
+<!-- Featured Conferences Section -->
+<section class="container mb-5">
+    <h2 class="text-center mb-4">Featured Conference Presentations</h2>
+    <p class="text-center text-muted mb-5">Detailed presentations with posters and interactive tools</p>
+    
+    <div class="row">
+        <!-- Idaho Water Quality Workshop -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-calendar-check"></i> Upcoming - March 2025</h5>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Idaho Water Quality Workshop (IWQW)</h4>
+                    <p class="text-muted mb-3"><i class="fas fa-map-marker-alt"></i> Boise, Idaho | March 3, 2025</p>
+                    <h6 class="mb-2">Presentation:</h6>
+                    <p class="card-text">How NRCS conservation practice standards impact agricultural water budgets?</p>
+                    <span class="badge bg-warning text-dark mb-3">Poster</span>
+                    <div class="d-flex gap-2">
+                        <a href="/conf/wqw" class="btn btn-primary">
+                            <i class="fas fa-eye"></i> View Details & Poster
+                        </a>
+                        <a href="https://dinesh933.pythonanywhere.com/approach2_params" target="_blank" class="btn btn-outline-primary">
+                            <i class="fas fa-calculator"></i> Run Model
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pacific Northwest Water Summit -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0"><i class="fas fa-history"></i> November 2024</h5>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Pacific Northwest Water Summit</h4>
+                    <p class="text-muted mb-3"><i class="fas fa-map-marker-alt"></i> Pacific Northwest</p>
+                    <h6 class="mb-2">Presentation:</h6>
+                    <p class="card-text">FAO-56 based soil water balance modeling for agricultural water management</p>
+                    <span class="badge bg-info text-dark mb-3">Poster</span>
+                    <div class="d-flex gap-2">
+                        <a href="/conf/pnw_ws24" class="btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Details & Poster
+                        </a>
+                        <a href="https://swb.hydroagrinexus.com/" target="_blank" class="btn btn-outline-secondary">
+                            <i class="fas fa-calculator"></i> Run Model
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- All Presentations by Year -->
+<section class="container mb-5">
+    <h2 class="text-center mb-4">All Presentations by Year</h2>
+    <p class="text-center text-muted mb-5">Complete list of conference presentations, talks, and posters</p>
+    
+    <!-- 2026 Section -->
+    <div class="mb-5">
+        <h3 class="border-bottom pb-2 mb-4"><i class="fas fa-calendar"></i> 2026</h3>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-primary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Jan 21</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">Idaho Potato Conference</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> Pocatello, ID</p>
+                                <p class="card-text">Revisiting potato evapotranspiration: Findings from continuous flux measurements in a commercial production field</p>
+                                <span class="badge bg-info">Oral Presentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2025 Section -->
+    <div class="mb-5">
+        <h3 class="border-bottom pb-2 mb-4"><i class="fas fa-calendar"></i> 2025</h3>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-primary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Nov 11</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">CANVAS Conference</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> Salt Lake City, UT</p>
+                                <p class="card-text mb-2"><strong>Presentation 1:</strong> Increased water retention from soil carbon gain is insufficient to result in a tangible positive change in agricultural water budgets</p>
+                                <p class="card-text"><strong>Presentation 2:</strong> Assimilation of in-situ soil moisture to constrain FAO-56 crop evapotranspiration in water-limited environments</p>
+                                <span class="badge bg-success">2 Oral Presentations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-primary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Nov 4</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">Pacific Northwest Water Summit</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> Boise, ID</p>
+                                <p class="card-text">Consumptive use & crop yield response to irrigation demand management in Idaho's Magic Valley</p>
+                                <span class="badge bg-warning text-dark">Poster</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-primary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Jul 14-15</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">ASABE/CSABE Annual Meeting</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> Toronto, Ontario, Canada</p>
+                                <p class="card-text mb-2"><strong>Presentation 1:</strong> Increased water retention from soil carbon gain is insufficient to result in a tangible positive change in agricultural water budgets</p>
+                                <p class="card-text mb-2"><strong>Presentation 2:</strong> Deploying OpenET to access consumptive use from field to water entity scales across Eastern Snake Plain Aquifer</p>
+                                <p class="card-text"><strong>Presentation 3:</strong> Tracking evapotranspiration of applied water and effective precipitation by color-coding standardized soil water budgets</p>
+                                <span class="badge bg-success">3 Oral Presentations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-primary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Mar 3</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">Idaho Water Quality Workshop (IWQW)</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> Boise, ID</p>
+                                <p class="card-text">How NRCS conservation practice standards impact agricultural water budgets?</p>
+                                <span class="badge bg-warning text-dark">Poster</span>
+                                <div class="mt-2">
+                                    <a href="/conf/wqw" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-eye"></i> View Poster
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2024 Section -->
+    <div class="mb-5">
+        <h3 class="border-bottom pb-2 mb-4"><i class="fas fa-calendar"></i> 2024</h3>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-secondary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Nov 11</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">ASA, CSSA, SSSA Annual Meeting</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> San Antonio, TX</p>
+                                <p class="card-text mb-2"><strong>Presentation 1:</strong> Hydrological losses under increased soil organic carbon and weather variability in different soil textures</p>
+                                <p class="card-text"><strong>Presentation 2:</strong> How does improving soil structure impact crop evapotranspiration and water stress across soil textures and aridity?</p>
+                                <span class="badge bg-success">2 Oral Presentations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-secondary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Jul 29-30</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">ASABE Annual Meeting</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> Anaheim, CA</p>
+                                <p class="card-text mb-2"><strong>Poster:</strong> Climatic and Seasonal Variation in ETr to ETo ratios calculated using ASCE standardized Penman-Monteith across the contiguous U.S.</p>
+                                <p class="card-text"><strong>Oral:</strong> Translating soil carbon sequestration into agrohydrological outcomes across a spectrum of aridity and soil texture</p>
+                                <span class="badge bg-warning text-dark">Poster</span>
+                                <span class="badge bg-info ms-2">Oral Presentation</span>
+                                <div class="mt-2">
+                                    <a href="/conf/pnw_ws24" class="btn btn-sm btn-outline-secondary">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <div class="text-secondary"><i class="fas fa-calendar-day fa-2x"></i></div>
+                                <small class="text-muted">Jul 15-16</small>
+                            </div>
+                            <div class="col-md-10">
+                                <h5 class="card-title">NABEC (Northeast Agricultural & Biological Engineering Conference)</h5>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> State College, PA</p>
+                                <p class="card-text mb-2"><strong>Poster:</strong> Climatic and Seasonal Variation in ETr to ETo ratios calculated using ASCE standardized Penman-Monteith across the contiguous U.S.</p>
+                                <p class="card-text"><strong>Oral:</strong> Translating soil carbon sequestration into agrohydrological outcomes across a spectrum of aridity and soil texture</p>
+                                <span class="badge bg-warning text-dark">Poster</span>
+                                <span class="badge bg-info ms-2">Oral Presentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Conference Statistics -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Conference Impact</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="p-4">
+                    <i class="fas fa-podium fa-3x text-primary mb-3"></i>
+                    <h3 class="display-4">14</h3>
+                    <p class="text-muted">Total Presentations</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4">
+                    <i class="fas fa-scroll fa-3x text-success mb-3"></i>
+                    <h3 class="display-4">4</h3>
+                    <p class="text-muted">Poster Presentations</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4">
+                    <i class="fas fa-users fa-3x text-info mb-3"></i>
+                    <h3 class="display-4">7</h3>
+                    <p class="text-muted">Professional Conferences</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="container py-5 text-center">
+    <h3 class="mb-4">Want to Learn More About My Research?</h3>
+    <p class="lead mb-4">View my full CV for complete publication and presentation history</p>
+    <a href="/cv" class="btn btn-primary btn-lg me-2">
+        <i class="fas fa-file-alt"></i> View Full CV
+    </a>
+    <a href="mailto:gula7530@vandals.uidaho.edu" class="btn btn-outline-primary btn-lg">
+        <i class="fas fa-envelope"></i> Contact Me
+    </a>
+</section>
 {% endblock %}
