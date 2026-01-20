@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Python Projects - HydroAgriNexus{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4 text-center">Python Applications</h1>
+    <p class="lead text-center">Interactive web applications for water resources and agricultural research</p>
+
+    <div class="row mt-5">
+        {% for app in apps %}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <i class="fab fa-python text-primary"></i> {{ app.name }}
+                    </h3>
+                    <p class="card-text">{{ app.description }}</p>
+                    <a href="{{ app.url }}" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Launch Application
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Additional Information Section -->
+    <div class="mt-5">
+        <h2>About These Applications</h2>
+        <p>
+            These Python web applications are deployed on cloud platforms (PythonAnywhere, Heroku) 
+            and provide interactive tools for:
+        </p>
+        <ul>
+            <li><strong>Soil Water Balance Modeling:</strong> FAO-56 based simulations for irrigation management</li>
+            <li><strong>Soil Organic Carbon Analysis:</strong> Assessment of carbon sequestration in agricultural systems</li>
+            <li><strong>Field Data Management:</strong> Tools for synchronizing and managing field research data</li>
+        </ul>
+    </div>
+
+    <!-- Technologies Used -->
+    <div class="mt-4 mb-5">
+        <h3>Technologies</h3>
+        <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-primary">Python</span>
+            <span class="badge bg-success">Flask</span>
+            <span class="badge bg-info">Pandas</span>
+            <span class="badge bg-warning text-dark">NumPy</span>
+            <span class="badge bg-secondary">Matplotlib</span>
+            <span class="badge bg-dark">Bootstrap</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
