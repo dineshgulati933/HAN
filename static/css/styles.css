@@ -2,6 +2,8 @@
     --bg-color: #ffffff;
     --text-color: #000000;
     --link-color: #17a2b8;
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
 }
 
 body.dark-mode {
@@ -11,35 +13,57 @@ body.dark-mode {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
 a {
     color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Section Titles */
 .section-title {
     margin-top: 2rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--link-color);
     padding-bottom: 0.5rem;
+    font-weight: 600;
 }
 
+/* Profile & CV Page */
 .profile-pic {
     width: 150px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .download-btn {
     margin-top: 1rem;
 }
 
+/* Theme Toggle */
 .theme-toggle {
     position: fixed;
     top: 1rem;
     right: 1rem;
+}
+
+/* Button Enhancements */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-outline-dark {
@@ -56,20 +80,141 @@ a {
     color: var(--bg-color);
 }
 
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+/* Project Cards (Legacy Support) */
 .project-section {
     margin-top: 2rem;
 }
+
 .project-card {
     border: none;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .project-image {
     height: 200px;
     object-fit: cover;
+}
+
+/* Hero Section */
+.display-4 {
+    font-weight: 700;
+}
+
+/* Badge Styles */
+.badge {
+    font-size: 0.85rem;
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+}
+
+/* List Groups */
+.list-group-item {
+    transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Conference Cards */
+.card.border-primary {
+    border-width: 2px;
+}
+
+/* Icons */
+.fa, .fas, .fab {
+    margin-right: 0.25rem;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+}
+
+/* Link Buttons in Cards */
+.card-body .btn {
+    margin-top: 0.5rem;
+}
+
+/* Statistics Section */
+.display-4 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Conference Timeline */
+.border-bottom {
+    border-color: var(--primary-color) !important;
+    border-width: 2px !important;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Accessibility */
+a:focus, button:focus {
+    outline: 2px solid var(--link-color);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar, footer, .btn {
+        display: none;
+    }
+    
+    body {
+        color: black;
+        background: white;
+    }
 }
