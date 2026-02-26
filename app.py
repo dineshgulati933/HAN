@@ -51,5 +51,9 @@ def wqw():
 def pnw_ws24():
     return render_template("conf/pnw_ws24.html")
 
+@app.route("/conf/wqw26")
+def wqw26():
+    return render_template("conf/wqw26.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
