@@ -49,12 +49,16 @@ PAGES = {
     },
     "conf/wqw.html": {
         "route": "/conf/wqw",
-        "title": "Water Quality Workshop"
+        "title": "Water Quality Workshop 2025"
     },
     "conf/pnw_ws24.html": {
         "route": "/conf/pnw_ws24",
         "title": "Pacific Northwest Water Summit 2024"
     },
+    "conf/wqw26.html": {
+        "route": "/conf/wqw26",
+        "title": "Water Quality Workshop 2026"
+    }
 }
 
 # External Apps (hosted on PythonAnywhere/Heroku)
