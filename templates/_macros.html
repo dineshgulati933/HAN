@@ -1,0 +1,83 @@
+{# Reusable pieces. Each card on the site is drawn by exactly one macro here. #}
+
+{% macro link_button(link, cls='btn') %}
+<a class="{{ cls }}" href="{{ link.url }}"{% if link.url|is_external %} target="_blank" rel="noopener"{% endif %}>
+  {%- if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}{{ link.label -}}
+</a>
+{%- endmacro %}
+
+
+{% macro pub_item(pub) %}
+<li class="pub">
+  <p class="pub-title">
+    {%- if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener">{{ pub.title|md }}</a>{% else %}{{ pub.title|md }}{% endif -%}
+  </p>
+  <p class="pub-authors">{{ pub.authors|authors }}</p>
+  <p class="pub-venue"><em>{{ pub.venue }}</em>{% if pub.details %}, {{ pub.details }}{% endif %} ({{ pub.year }})</p>
+  <div class="pub-meta">
+    {% if pub.status != 'published' %}<span class="tag tag-status">{{ pub.status|capitalize }}</span>{% endif %}
+    {% if pub.type == 'software' %}<span class="tag tag-software"><i class="fa-solid fa-code" aria-hidden="true"></i>Software</span>{% endif %}
+    {% for badge in pub.badges %}<span class="tag tag-award"><i class="fa-solid fa-award" aria-hidden="true"></i>{{ badge }}</span>{% endfor %}
+    {% if pub.doi %}<a class="btn btn-xs" href="{{ pub.link }}" target="_blank" rel="noopener">DOI</a>
+    {% elif pub.url %}<a class="btn btn-xs" href="{{ pub.url }}" target="_blank" rel="noopener">Link</a>{% endif %}
+    {% for link in pub.links %}{{ link_button(link, 'btn btn-xs') }}{% endfor %}
+  </div>
+</li>
+{%- endmacro %}
+
+
+{% macro talk_tags(talk) %}
+<span class="tag tag-{{ talk.type }}">{{ talk.type_label }}</span>
+{%- if talk.coauthor_presented %}<span class="tag tag-coauthor"><i class="fa-solid fa-user-group" aria-hidden="true"></i>Co-author presented</span>{% endif %}
+{%- endmacro %}
+
+
+{% macro talk_item(talk) %}
+<li class="talk{% if talk.poster_thumb %} has-thumb{% endif %}" data-talk data-type="{{ talk.type }}"
+    data-coauthor="{{ 'true' if talk.coauthor_presented else 'false' }}" data-has-poster="{{ 'true' if talk.poster else 'false' }}">
+  <div class="talk-body">
+    <div class="tags">{{ talk_tags(talk) }}</div>
+    <h4 class="talk-title">
+      {%- if talk.page_url %}<a href="{{ talk.page_url }}">{{ talk.title|md }}</a>{% else %}{{ talk.title|md }}{% endif -%}
+    </h4>
+    {% if talk.authors %}<p class="talk-authors">{{ talk.authors|authors }}</p>{% endif %}
+    {% if talk.presenter %}<p class="talk-note"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i>Presented by {{ talk.presenter }}</p>{% endif %}
+    {% if talk.page_url or talk.slides or talk.links %}
+    <div class="actions">
+      {% if talk.poster %}<a class="btn btn-sm btn-primary" href="{{ talk.page_url }}"><i class="fa-regular fa-image" aria-hidden="true"></i>View poster</a>
+      {% elif talk.page_url %}<a class="btn btn-sm" href="{{ talk.page_url }}">Details</a>{% endif %}
+      {% if talk.slides %}<a class="btn btn-sm" href="{{ talk.slides }}" target="_blank" rel="noopener"><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>Slides</a>{% endif %}
+      {% for link in talk.links %}{{ link_button(link, 'btn btn-sm') }}{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% if talk.poster_thumb %}
+  <a class="talk-thumb" href="{{ talk.page_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ talk.poster_thumb }}" alt="" loading="lazy">
+  </a>
+  {% endif %}
+</li>
+{%- endmacro %}
+
+
+{% macro event_card(ev) %}
+<article class="event{% if ev.end >= today %} is-upcoming{% endif %}" id="{{ ev.id }}" data-event data-end="{{ ev.end.isoformat() }}">
+  <div class="event-date" aria-hidden="true">
+    <span class="event-month">{{ ev.start|month }}</span>
+    <span class="event-day">{{ ev.start.day }}{% if ev.end != ev.start and ev.end.month == ev.start.month %}–{{ ev.end.day }}{% endif %}</span>
+  </div>
+  <div class="event-main">
+    <header class="event-head">
+      <h3>{% if ev.url %}<a href="{{ ev.url }}" target="_blank" rel="noopener">{{ ev.name }}</a>{% else %}{{ ev.name }}{% endif %}</h3>
+      <p class="event-meta">
+        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ ev.location }}{% if ev.venue %} · {{ ev.venue }}{% endif %}</span>
+        <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>{{ ev.when }}</span>
+        <span class="tag tag-upcoming">Upcoming</span>
+      </p>
+    </header>
+    <ul class="talks">
+      {% for talk in ev.talks %}{{ talk_item(talk) }}{% endfor %}
+    </ul>
+  </div>
+</article>
+{%- endmacro %}

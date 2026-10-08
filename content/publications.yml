@@ -1,0 +1,67 @@
+# ---------------------------------------------------------------------------
+# Publications. Order doesn't matter — sorted by year (newest first), then by
+# the order written here.
+#
+#   authors:  as in your CV; your name (site.yml -> highlight_author) is bolded
+#   year:     (required)
+#   title:    (required)
+#   venue:    journal / proceedings name (required)
+#   details:  volume(issue), pages or article number
+#   doi:      just the DOI, e.g. 10.1029/2025WR041768 — the link is built for you
+#   url:      use instead of doi for things without one
+#   status:   published (default) | accepted | in review | in prep | preprint
+#   type:     journal (default) | software | proceedings | report | thesis
+#   featured: true -> also listed under "Selected publications" on the home page
+#   badges:   short highlights, e.g. ["Vanguard Award 2025"]
+#   links:    extra buttons, e.g. - { label: Code, url: https://github.com/... }
+# ---------------------------------------------------------------------------
+
+- authors: Keshavarz Afshar, R., Tricarico, J., Medel-Jiménez, F., Kukal, M. S., Gulati, D., et al.
+  year: 2026
+  title: Transparent and harmonized allocation factors for crop-processing co-products in U.S. dairy rations
+  venue: The International Journal of Life Cycle Assessment
+  details: 31, 180
+  doi: 10.1007/s11367-026-02750-w
+
+- authors: Gulati, D., & Kukal, M. S.
+  year: 2026
+  title: Improved water retention from soil carbon accrual delivers only marginal agrohydrological benefits under most conditions
+  venue: Water Resources Research
+  details: 62(4), e2025WR041768
+  doi: 10.1029/2025WR041768
+  featured: true
+
+- authors: Thorp, K. R., Gulati, D., Kukal, M., Ames, R., Pokoski, T., & DeJonge, K. C.
+  year: 2025
+  title: "Version 1.4.0 – pyfao56: FAO-56 evapotranspiration in Python"
+  venue: SoftwareX
+  details: 30, 102109
+  doi: 10.1016/j.softx.2025.102109
+  type: software
+  featured: true
+  badges: [Vanguard Award 2025]
+  links:
+    - { label: Code, icon: fa-brands fa-github, url: "https://github.com/kthorp/pyfao56" }
+
+- authors: Thorp, K. R., DeJonge, K. C., Pokoski, T., Gulati, D., Kukal, M., Farag, F., … & Holzkaemper, A.
+  year: 2024
+  title: "Version 1.3.0 – pyfao56: FAO-56 evapotranspiration in Python"
+  venue: SoftwareX
+  details: 26, 101724
+  doi: 10.1016/j.softx.2024.101724
+  type: software
+
+- authors: Singla, P., Sharda, R., Sharma, S., Gulati, D., Pandey, K., Navprem, S., … & Sharma, A.
+  year: 2023
+  title: Variation in physio-chemical attributes and WUE during growth and development of Pak choi (*Brassica rapa* L. subsp. *chinensis* L.) under different drip fertigation and mulching treatments
+  venue: Acta Alimentaria
+  details: 52(3), 458–468
+  doi: 10.1556/066.2023.00084
+
+- authors: Gulati, D., Satpute, S., Kaur, S., & Aggarwal, R.
+  year: 2022
+  title: Estimation of potential recharge through direct seeded and transplanted rice fields in semi-arid regions of Punjab using HYDRUS-1D
+  venue: Paddy and Water Environment
+  details: 1–14
+  doi: 10.1007/s10333-021-00876-1
+  featured: true

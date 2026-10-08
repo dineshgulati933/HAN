@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------------------
+# News for the home page — add a line whenever something happens.
+#   date: YYYY-MM-DD, YYYY-MM, or just YYYY
+#   text: one or two sentences; **bold**, *italic*, [links](/conf/wqw26) work
+# The newest items appear first; site.yml -> home.news_count controls how many.
+# ---------------------------------------------------------------------------
+
+- date: 2026-07
+  text: >-
+    Presented two talks and a poster at the **ASABE Annual International Meeting** in
+    Indianapolis, including a demo of [FAO56-Studio](https://swb.hydroagrinexus.com/).
+
+- date: 2026-04
+  text: >-
+    New first-author paper in *Water Resources Research*: improved water retention from soil
+    carbon accrual delivers only marginal agrohydrological benefits.
+    [Read it](https://doi.org/10.1029/2025WR041768).
+
+- date: 2026-03
+  text: >-
+    Poster at the **Idaho Water Quality Workshop** on the feasibility of deficit irrigation in
+    Idaho's Magic Valley. [View poster](/conf/wqw26).
+
+- date: 2026
+  text: >-
+    Received the **Grant A. Harris Fellowship** from METER Group ($10,000 in instruments).
+
+- date: 2025-11
+  text: >-
+    Two talks at **CANVAS 2025** in Salt Lake City and a poster at the
+    **Pacific Northwest Water Summit** in Boise. [View poster](/conf/pnw_ws24).
+
+- date: 2025
+  text: >-
+    pyfao56 received the Irrigation Association's **Vanguard Award**.
+
+- date: 2025
+  text: >-
+    Awarded the **Joseph Jordan Student Research Fellowship** from IWRRI.

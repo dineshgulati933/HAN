@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% from "_macros.html" import talk_tags, link_button %}
+{% block title %}{{ talk.title }} · {{ talk.event.label }}{% endblock %}
+{% block description %}{{ talk.type_label }} by {{ site.name }} at {{ talk.event.name }}, {{ talk.event.location }}, {{ talk.date|day }}.{% endblock %}
+{% block og_image %}{% if talk.poster_og %}<meta property="og:image" content="{{ site.url.rstrip('/') }}{{ talk.poster_og }}">{% else %}{{ super() }}{% endif %}{% endblock %}
+
+{% block content %}
+{% set ev = talk.event %}
+<section class="page-head poster-head">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/presentations">Presentations</a><span aria-hidden="true">/</span><a href="/presentations#{{ ev.id }}">{{ ev.label }}</a>
+    </nav>
+    <div class="tags">{{ talk_tags(talk) }}</div>
+    <h1>{{ talk.title|md }}</h1>
+    <p class="event-meta">
+      <span><i class="fa-solid fa-people-group" aria-hidden="true"></i>{{ ev.name }}</span>
+      <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ ev.location }}</span>
+      <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>{{ talk.date|day }}</span>
+    </p>
+    {% if talk.authors %}<p class="talk-authors">{{ talk.authors|authors }}</p>{% endif %}
+    {% if talk.presenter %}<p class="talk-note"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i>Presented by {{ talk.presenter }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    {% if talk.poster %}
+    <figure class="poster-figure">
+      {% if talk.poster_large %}
+      <a href="{{ talk.poster_full }}" target="_blank" rel="noopener">
+        <img src="{{ talk.poster_large }}" alt="Poster: {{ talk.title }}">
+      </a>
+      <figcaption>Tap the poster to open it at full resolution.</figcaption>
+      {% elif talk.poster_is_pdf %}
+      <object data="{{ talk.poster_full }}" type="application/pdf" class="poster-pdf">
+        <p><a href="{{ talk.poster_full }}">Open the poster (PDF)</a></p>
+      </object>
+      {% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="actions center">
+      {% if talk.poster %}<a class="btn btn-primary" href="{{ talk.poster_full }}" download><i class="fa-solid fa-download" aria-hidden="true"></i>Download poster</a>{% endif %}
+      {% if talk.slides %}<a class="btn" href="{{ talk.slides }}" target="_blank" rel="noopener"><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>Slides</a>{% endif %}
+      {% for link in talk.links %}{{ link_button(link, 'btn') }}{% endfor %}
+    </div>
+
+    {% if talk.abstract %}
+    <div class="narrow prose abstract">
+      <h2>Abstract</h2>
+      <p>{{ talk.abstract|md }}</p>
+    </div>
+    {% endif %}
+
+    <aside class="presenter-card narrow">
+      {% if site.avatar_url %}<img src="{{ site.avatar_url }}" alt="">{% endif %}
+      <div>
+        <p class="presenter-name">{{ site.name }}</p>
+        <p class="presenter-role">{{ site.position }}, {{ site.affiliation }}</p>
+        <div class="link-row">
+          <a class="btn btn-sm" href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a>
+          {% for link in site.links if link.url|is_external %}{{ link_button(link, 'btn btn-sm') }}{% endfor %}
+          <a class="btn btn-sm" href="/">Website</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

@@ -1,238 +1,32 @@
 {% extends "base.html" %}
-
-{% block title %}About - HydroAgriNexus{% endblock %}
+{% block title %}About · {{ site.name }}{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <h1 class="mb-4">About Dinesh Gulati</h1>
-    
-    <section class="mb-5">
-        <h2>Research Overview</h2>
-        <p class="lead">I am a Ph.D. student in Water Resources at the University of Idaho, working under the guidance of Dr. Meetpal S. Kukal. My research focuses on developing and deploying soil water budget models tailored for Idaho agroecosystems and their applications in climate-smart agriculture.</p>
-    </section>
+<section class="page-head">
+  <div class="container">
+    <h1>About</h1>
+    <p class="lead">{{ site.position }}, {{ site.affiliation }}</p>
+  </div>
+</section>
 
-    <section class="mb-5">
-        <h2>Current Research Focus</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h4><i class="fas fa-water text-primary"></i> Soil Water Budgeting</h4>
-                <p>Developing comprehensive FAO-56 based soil water balance models and contributing to the open-source pyfao56 package (recipient of the 2025 Irrigation Association's Vanguard Award).</p>
-            </div>
-            <div class="col-md-6">
-                <h4><i class="fas fa-satellite text-success"></i> Remote Sensing & GEE</h4>
-                <p>Utilizing Google Earth Engine to analyze OpenET, gridMET, and soil data for the Eastern Snake Plain Aquifer, advancing our understanding of consumptive water use at multiple scales.</p>
-            </div>
-            <div class="col-md-6">
-                <h4><i class="fas fa-leaf text-info"></i> Climate-Smart Agriculture</h4>
-                <p>Assessing the impacts of soil organic carbon enhancement and conservation practices on agrohydrological processes across diverse soil types, climates, and irrigation management strategies.</p>
-            </div>
-            <div class="col-md-6">
-                <h4><i class="fas fa-code text-warning"></i> Software Development</h4>
-                <p>Building interactive web applications for agricultural water management including FAO56-Studio and SnakeFlux cooperator portal for eddy covariance data delivery.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-5">
-        <h2>Academic Background</h2>
-        <p>I hold a Master of Technology in Soil and Water Engineering from Punjab Agricultural University, India, where my research focused on simulating groundwater recharge from different rice cultivation systems using HYDRUS-1D. Prior to that, I earned my Bachelor of Technology in Agricultural Engineering from the same institution.</p>
-    </section>
-
-    <section class="mb-5">
-        <h2>Recent Achievements</h2>
-        <ul class="list-unstyled">
-            <li class="mb-2"><i class="fas fa-trophy text-warning"></i> <strong>Vanguard Award (2025)</strong> - Irrigation Association for pyfao56</li>
-            <li class="mb-2"><i class="fas fa-award text-primary"></i> <strong>Joseph Jordan Student Research Fellowship (2025)</strong> - $3,500 from IWRRI</li>
-            <!-- <li class="mb-2"><i class="fas fa-graduation-cap text-success"></i> <strong>Perfect GPA</strong> - 4.00 in Ph.D. program at University of Idaho</li> -->
-            <li class="mb-2"><i class="fas fa-book text-info"></i> <strong>Multiple Publications</strong> - Published in SoftwareX, Paddy and Water Environment, and Acta Alimentaria</li>
-        </ul>
-    </section>
-
-    <section class="mb-5">
-        <h2>Contact Information</h2>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:gula7530@vandals.uidaho.edu">gula7530@vandals.uidaho.edu</a></p>
-        <p><i class="fas fa-phone"></i> +1 (814) 826-5770</p>
-        <p><i class="fas fa-map-marker-alt"></i> 900 W Royal Blvd., Idaho, USA</p>
-        <div class="mt-3">
-            <a href="https://www.linkedin.com/in/dinesh-gulati-120779149/" target="_blank" class="btn btn-outline-primary me-2">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/dineshgulati933" target="_blank" class="btn btn-outline-dark me-2">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="/cv" class="btn btn-outline-info">
-                <i class="fas fa-file-alt"></i> View Full CV
-            </a>
-        </div>
-    </section>
-</div>
-<div class="container mt-5">
-    <div class="row align-items-center">
-        <!-- Left: Profile Picture with Shadow -->
-        <div class="col-lg-4 text-center">
-            <img src="{{ url_for('static', filename='images/Profile_pic.jpg') }}" 
-                 alt="Dinesh Gulati" 
-                 class="img-fluid rounded-circle shadow-lg p-3" 
-                 style="max-width: 90%;">
-        </div>
-        
-        <!-- Right: About Story -->
-        <div class="col-md-8">
-            <h2>My Journey: From Fields to Algorithms</h2>
-            <p class="lead">
-                Water is life. But for those who depend on agriculture, it is also <strong>livelihood, sustenance, and survival</strong>.  
-                Growing up, I was always fascinated by the <strong>delicate balance between soil, water, and crops</strong>, and how even the smallest inefficiency in irrigation could impact an entire farming season.  
-                That curiosity led me on a journey that has shaped my career, taking me across fields, research labs, and now—into the realm of <strong>data-driven agriculture</strong>.
-            </p>
-            <p>
-                My first deep dive into <strong>water resource management</strong> began during my <strong>Bachelor’s in Agricultural Engineering</strong> at <strong>Punjab Agricultural University</strong>.  
-                While studying <strong>irrigation techniques and soil conservation</strong>, I worked on a project evaluating <strong>straw management technologies in paddy fields</strong>—an experience that first exposed me to the <strong>challenges of water loss and sustainability</strong>.
-            </p>
-            <p>
-                Wanting to better understand the science behind <strong>how soil stores and moves water</strong>, I pursued my <strong>Master’s in Soil and Water Engineering</strong>.  
-                Here, I designed and ran <strong>HYDRUS-1D simulations</strong> to estimate <strong>groundwater recharge in transplanted vs. direct-seeded rice fields</strong>, helping me see first-hand how <strong>modeling can complement real-world water management</strong>. 
-            </p>
-            <p>
-                But research alone wasn’t enough. I wanted to develop <strong>real-world solutions</strong>.  
-                As a <strong>Senior Research Fellow</strong>, along with managing multiple field trials, I worked on <strong>developing IoT-based greenhouse waether monitoring sensors</strong>, building <strong>low-cost, on-field microcontrollers</strong> to track variation in micro-climate under different treatments.  
-                It was the first time I saw how <strong>technology could transform water conservation</strong>—a realization that set the stage for my next big leap.
-            </p>
-        </div>
-    </div>
-
-    <!-- Research & Current Work -->
-    <section class="mt-5">
-        <h3>Applying Science to Solve Real Problems</h3>
-        <p>
-            In <strong>2023</strong>, I began my <strong>Ph.D. in Water Resources at the University of Idaho</strong>, in <strong>"Agrohydrology for Global Change Lab"</strong> where I now focus on <strong>irrigation and soil-water-plant interactions</strong>.  
-            My research blends <strong>hydrological modeling, machine learning, and remote sensing</strong> to better understand the soil water budgets and thus improve <strong>water productivity in agriculture</strong>.
-        </p>
-        <p>
-            Some of my recent work includes:
-            <ul>
-                <li>Developing new functionalities for the <code>pyfao56</code> Python package to model <strong>crop growth, evapotranspiration, and irrigation scheduling</strong>.</li>
-                <li>Using <strong>GIS-integrated crop modeling</strong> with OpenET and gridMET data to predict <strong>irrigation demands across different climates</strong>.</li>
-                <li>Evaluating the <strong>impact of soil organic carbon (SOC) on soil water budgets</strong> to understand the impact of <strong>conservation practices for potential benefits</strong>.</li>
-            </ul>
-        </p>
-        <p>
-            By <strong>integrating remote sensing, IoT-based sensors, and machine learning</strong>, I aim to build a <strong>decision-support system for farmers and water managers</strong>—one that provides real-time, predictive insights into <strong>how to irrigate more efficiently while conserving water</strong>.
-        </p>
-    </section>
-
-    <!-- Vision & Future Goals -->
-    <section class="mt-5">
-        <h3>The Future of Smart Agriculture</h3>
-        <p>
-            My goal is simple: <strong>to make agriculture more water-efficient and resilient</strong>.  
-            As climate change <strong>reshapes water availability</strong>, we must build <strong>data-driven, adaptive irrigation systems</strong> that help farmers grow <strong>more crops with less water</strong>.
-        </p>
-        <p>
-            In my current research, I am working on <strong>a framework that integrates soil water simulations, OpenET remote sensing data, and field sensors</strong>.  
-            By analyzing <strong>real-time soil moisture, irrigation efficiency, and weather variability</strong>, we can <strong>improve predictions and decision-making</strong> in water-scarce agricultural regions.
-        </p>
-        <p>
-            I believe that the <strong>future of sustainable farming lies in bridging traditional agriculture with modern technology</strong>—a belief that fuels my work every day.
-        </p>
-    </section>
-
-    <!-- Research & Impact Stats -->
-    <section class="mt-5 text-center">
-        <h3 class="text-primary fw-bold">Research & Impact</h3>
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3">
-                    <i class="fas fa-book fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">3+ Publications</h5>
-                    <p>Peer-reviewed papers in water resources & hydrology</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3">
-                    <i class="fas fa-users fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">Multiple Presentations</h5>
-                    <p>ASA, CSSA, ASABE & NABEC Conferences</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3">
-                    <i class="fas fa-project-diagram fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">Ongoing Research</h5>
-                    <p>Soil Organic Carbon & Water Productivity</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3">
-                    <i class="fas fa-award fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">Scholarships & Awards</h5>
-                    <p>Whiting Water Scholarship, ISTE Best Thesis</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Timeline (Collapsible) -->
-    <!-- <section class="mt-5">
-        <h3 class="text-primary fw-bold text-center">Research Timeline</h3>
-        <div class="accordion mt-3" id="researchTimeline">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#research2023">
-                        <strong>2023 - Present | Ph.D. Research (University of Idaho)</strong>
-                    </button>
-                </h2>
-                <div id="research2023" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Developing AI-powered <strong>soil-water balance models</strong></li>
-                            <li>Enhancing the <code>pyfao56</code> package for <strong>irrigation scheduling</strong></li>
-                            <li>Studying <strong>climate-driven hydrological changes</strong> in agriculture</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Expertise Section (Hover Effects) -->
-    <section class="mt-5 text-center">
-        <h3 class="text-primary fw-bold">Expertise</h3>
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3 expertise-card">
-                    <i class="fas fa-globe fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">GIS & Remote Sensing</h5>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3 expertise-card">
-                    <i class="fas fa-code fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">Python & Machine Learning</h5>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3 expertise-card">
-                    <i class="fas fa-tint fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">Hydrological Modeling</h5>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-sm p-3 expertise-card">
-                    <i class="fas fa-seedling fa-3x text-primary"></i>
-                    <h5 class="fw-bold mt-2">Precision Irrigation</h5>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- Custom CSS for Hover Effects -->
-<style>
-    .expertise-card:hover {
-        background-color: #007bff;
-        color: white;
-        transition: all 0.3s ease-in-out;
-    }
-</style>
-
+<section class="section section-tight">
+  <div class="container about">
+    <aside class="about-side">
+      {% if site.photo_url %}
+      <img class="about-photo" src="{{ site.photo_url }}" alt="{{ site.name }}" width="640" height="800">
+      {% endif %}
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        {% if site.lab %}<li><i class="fa-solid fa-flask" aria-hidden="true"></i>{{ site.lab }}</li>{% endif %}
+        {% if site.advisor %}<li><i class="fa-solid fa-user-tie" aria-hidden="true"></i>Advisor: {{ site.advisor }}</li>{% endif %}
+        {% for link in site.links if link.url|is_external %}
+        <li><i class="{{ link.icon }}" aria-hidden="true"></i><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
+    <article class="prose">
+      {{ about }}
+    </article>
+  </div>
+</section>
 {% endblock %}

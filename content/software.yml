@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------------------
+# Web apps and software.
+#   name, description          (required)
+#   role:     Developer | Lead developer | Contributor ...
+#   url:      where people can use it -> "Launch" button
+#   repo:     source code -> "Code" button
+#   paper:    DOI of the paper describing it
+#   icon:     any Font Awesome icon, e.g. fa-solid fa-calculator
+#   tags:     short keywords
+#   featured: true -> also shown on the home page
+# ---------------------------------------------------------------------------
+
+- name: FAO56-Studio
+  role: Developer
+  icon: fa-solid fa-calculator
+  description: >-
+    An interactive, no-code web platform for simulating FAO-56 based soil water budgets
+    with the dual crop coefficient approach.
+  url: https://swb.hydroagrinexus.com/
+  tags: [FAO-56, Evapotranspiration, Web app]
+  featured: true
+
+- name: pyfao56
+  role: Contributor
+  icon: fa-brands fa-python
+  description: >-
+    Open-source Python package for FAO-56 evapotranspiration and soil water balance.
+    Recipient of the Irrigation Association's 2025 Vanguard Award.
+  repo: https://github.com/kthorp/pyfao56
+  paper: 10.1016/j.softx.2025.102109
+  tags: [Python, FAO-56, Open source]
+  featured: true
+
+- name: SnakeFlux
+  role: Developer
+  icon: fa-solid fa-chart-line
+  description: >-
+    Cooperator portal that automates eddy covariance data delivery and visualization
+    for research partners.
+  url: https://fieldsync.pythonanywhere.com/
+  tags: [Flask, Eddy covariance, Data portal]
+  featured: true
+
+- name: SWB-SOC
+  role: Developer
+  icon: fa-solid fa-leaf
+  description: >-
+    Soil water balance model with soil organic carbon effects, for assessing
+    climate-smart agriculture practices.
+  url: https://dinesh933.pythonanywhere.com/approach1_params
+  tags: [Soil organic carbon, Water balance]
+
+- name: NRCS CPS-based SWB
+  role: Developer
+  icon: fa-solid fa-tractor
+  description: >-
+    Soil water balance model built on NRCS conservation practice standards, for
+    evaluating how those practices change agricultural water budgets.
+  url: https://dinesh933.pythonanywhere.com/approach2_params
+  tags: [NRCS, Conservation practices, Water balance]
