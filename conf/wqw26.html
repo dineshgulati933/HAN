@@ -1,123 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WQW - HydroAgriNexus</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluating feasibility of deficit irrigation in Idaho&#39;s Magic Valley · IWQW 2026</title>
+  <meta name="description" content="Poster by Dinesh Gulati at Idaho Water Quality Workshop, Boise, ID, Mar 3, 2026.">
+  <link rel="canonical" href="https://hydroagrinexus.com/conf/wqw26">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dinesh Gulati">
+  <meta property="og:title" content="Evaluating feasibility of deficit irrigation in Idaho&#39;s Magic Valley · IWQW 2026">
+  <meta property="og:description" content="Poster by Dinesh Gulati at Idaho Water Quality Workshop, Boise, ID, Mar 3, 2026.">
+  <meta property="og:url" content="https://hydroagrinexus.com/conf/wqw26">
+<meta property="og:image" content="https://hydroagrinexus.com/static/generated/posters-iwqw26-deficit-irrigation-1200.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a6c86">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/site.css?v=20261008221558">
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">HydroAgriNexus</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cv">CV</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Python Apps
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="appsDropdown">
-                            <li><a class="dropdown-item" href="https://dinesh933.pythonanywhere.com/approach1_params" target="_blank">SWB-SOC</a></li>
-                            <li><a class="dropdown-item" href="https://dinesh933.pythonanywhere.com/approach2_params" target="_blank">SWB-SOC-CPS</a></li>
-                            <li><a class="dropdown-item" href="https://fieldsync.pythonanywhere.com/" target="_blank">SnakeFlux</a></li>
-                            <li><a class="dropdown-item" href="https://swb.hydroagrinexus.com/" target="_blank">FAO56-Studio</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Dinesh Gulati</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/publications">Publications</a>
+        <a href="/presentations" aria-current="page">Presentations</a>
+        <a href="/software">Software</a>
+        <a href="/cv">CV</a>
+        <a href="/about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="page-head poster-head">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/presentations">Presentations</a><span aria-hidden="true">/</span><a href="/presentations#iwqw-2026">IWQW 2026</a>
     </nav>
-    <div class="container mt-4">
-        
-<div class="container mt-4 text-center">
-    <h1 class="mb-4">Idaho Water Quality Workshop 2026</h1>
-    <p class="lead">Explore our research and soil water balance simulation model.</p>
+    <div class="tags"><span class="tag tag-poster">Poster</span></div>
+    <h1>Evaluating feasibility of deficit irrigation in Idaho's Magic Valley</h1>
+    <p class="event-meta">
+      <span><i class="fa-solid fa-people-group" aria-hidden="true"></i>Idaho Water Quality Workshop</span>
+      <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Boise, ID</span>
+      <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>Mar 3, 2026</span>
+    </p>
+<p class="talk-authors"><strong class="me">Gulati, D.</strong>, &amp; Kukal, M. S.</p>  </div>
+</section>
 
-    <!-- Connect Section -->
-    <div class="mt-3 mb-4">
-        <a href="https://www.linkedin.com/in/dinesh-gulati-120779149/" target="_blank" class="btn btn-outline-primary me-2">
-            <i class="fab fa-linkedin"></i> Connect on LinkedIn
-        </a>
-    </div>
+<section class="section section-tight">
+  <div class="container">
+    <figure class="poster-figure">
+      <a href="/static/posters/iwqw26_deficit_irrigation.png" target="_blank" rel="noopener">
+        <img src="/static/generated/posters-iwqw26-deficit-irrigation-2000.webp" alt="Poster: Evaluating feasibility of deficit irrigation in Idaho&#39;s Magic Valley">
+      </a>
+      <figcaption>Tap the poster to open it at full resolution.</figcaption>
+    </figure>
 
-    <!-- Research Poster Card -->
-    <div class="mt-5">
-        <div class="card shadow-lg mx-auto" style="max-width: 900px;">
-            <div class="card-header bg-primary text-white">
-                <h3 class="mb-0"><i class="fas fa-file-image"></i> Research Poster</h3>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Click on poster to view or download.</p>
-                <div class="mt-3">
-                    <a href="../static/images/WQW26_poster.png" target="_blank">
-                        <img src="../static/images/WQW26_poster.png" alt="IWQW Poster" class="img-fluid shadow-sm" style="max-width: 100%; height: auto; border-radius: 8px;">
-                    </a>
-                </div>
-            </div>
+    <div class="actions center">
+<a class="btn btn-primary" href="/static/posters/iwqw26_deficit_irrigation.png" download><i class="fa-solid fa-download" aria-hidden="true"></i>Download poster</a><a class="btn" href="https://swb.hydroagrinexus.com/" target="_blank" rel="noopener">Try FAO56-Studio</a>    </div>
+
+
+    <aside class="presenter-card narrow">
+<img src="/static/generated/images-dg-avatar-240.webp" alt="">      <div>
+        <p class="presenter-name">Dinesh Gulati</p>
+        <p class="presenter-role">Ph.D. Candidate in Water Resources, University of Idaho</p>
+        <div class="link-row">
+          <a class="btn btn-sm" href="mailto:gula7530@vandals.uidaho.edu"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a>
+<a class="btn btn-sm" href="https://www.linkedin.com/in/dinesh-gulati/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</a><a class="btn btn-sm" href="https://github.com/dineshgulati933" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a><a class="btn btn-sm" href="https://scholar.google.com/citations?user=g_QBa2kAAAAJ" target="_blank" rel="noopener"><i class="fa-brands fa-google-scholar" aria-hidden="true"></i>Google Scholar</a><a class="btn btn-sm" href="https://orcid.org/0009-0009-8264-1912" target="_blank" rel="noopener"><i class="fa-brands fa-orcid" aria-hidden="true"></i>ORCID</a>          <a class="btn btn-sm" href="/">Website</a>
         </div>
-    </div>
+      </div>
+    </aside>
+  </div>
+</section>
+  </main>
 
-    <!-- Simulation Link Section -->
-    <div class="mt-5">
-        <div class="card shadow-lg mx-auto" style="max-width: 900px;">
-            <div class="card-header bg-info text-white">
-                <h3 class="mb-0"><i class="fas fa-calculator"></i> Interactive Simulation</h3>
-            </div>
-            <div class="card-body">
-                <h5>Run the Soil Water Balance Simulation</h5>
-                <p class="card-text">
-                    Try out the <strong>FAO-56 soil water balance model</strong> for simulating soil water balance.
-                </p>
-                <a href="https://swb.hydroagrinexus.com/" target="_blank" class="btn btn-primary btn-lg">
-                    <i class="fas fa-play-circle"></i> Launch Simulation
-                </a>
-            </div>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-icons" aria-hidden="true">
+          <i class="fa-solid fa-satellite"></i><i class="fa-solid fa-droplet"></i><i class="fa-solid fa-seedling"></i>
+        </span>
+        <span>HydroAgriNexus · More crops with each drop</span>
+      </div>
+      <div class="footer-meta">
+        © 2026 Dinesh Gulati · Updated Oct 8, 2026
+      </div>
     </div>
-</div>
-
-    </div>
-    <footer class="bg-primary text-white text-center py-3">
-        <p>More Crops with Each Drop</p>
-        <div class="d-flex justify-content-center mt-2">
-            <!-- Satellite -->
-            <div class="mx-3">
-                <i class="fas fa-satellite fa-2x"></i>
-                <!-- <p>Satellite</p> -->
-            </div>
-            <!-- Water Droplet -->
-            <div class="mx-3">
-                <i class="fas fa-tint fa-2x"></i>
-                <!-- <p>Water</p> -->
-            </div>
-            <!-- Plant -->
-            <div class="mx-3">
-                <i class="fas fa-seedling fa-2x"></i>
-                <!-- <p>Plant</p> -->
-            </div>
-            <!-- Soil -->
-            <!-- <div class="mx-3">
-                <i class="fas fa-leaf fa-2x"></i> -->
-                <!-- <p>Soil</p> -->
-            <!-- </div> -->
-
-        </div>
-        <p>&copy; 2025 HydroAgriNexus | All rights reserved</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </footer>
+  <script src="/static/js/site.js?v=20261008221558" defer></script>
 </body>
 </html>
