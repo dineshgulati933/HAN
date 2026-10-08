@@ -7,8 +7,15 @@
 <section class="page-head">
   <div class="container narrow cv-head">
     <div>
-      <h1>Curriculum vitae</h1>
-      <p class="lead">{{ site.position }}, {{ site.affiliation }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p class="eyebrow">Curriculum vitae</p>
+      <h1>{{ site.name }}</h1>
+      <p class="lead">{{ site.position }}, {{ site.affiliation }}</p>
+      <p class="cv-contact">
+        <a href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i>{{ site.email }}</a>
+        {% for link in site.links if link.url|is_external %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener"><i class="{{ link.icon }}" aria-hidden="true"></i>{{ link.label }}</a>
+        {% endfor %}
+      </p>
     </div>
     {% if site.cv_pdf %}
     <a class="btn btn-primary" href="/static/{{ site.cv_pdf }}"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>Download PDF</a>
