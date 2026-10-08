@@ -1,0 +1,87 @@
+# ---------------------------------------------------------------------------
+# Site-wide settings and your profile.
+# Text fields accept light formatting: **bold**, *italic*, [link text](https://...)
+# ---------------------------------------------------------------------------
+
+name: Dinesh Gulati
+brand: HydroAgriNexus
+tagline: More crops with each drop
+url: https://hydroagrinexus.com
+domain: hydroagrinexus.com          # written to CNAME on every build
+
+position: Ph.D. Candidate in Water Resources
+affiliation: University of Idaho
+lab: Agrohydrology for Global Change Lab
+advisor: Dr. Meetpal S. Kukal
+
+# Shown in search results and link previews (keep under ~160 characters)
+description: >-
+  Dinesh Gulati, Ph.D. candidate in Water Resources at the University of Idaho,
+  working on soil water budgets, evapotranspiration, and agricultural water management.
+
+photo: images/dg.jpg               # path inside static/
+# Crops as fractions of the photo's width and height: [left, top, right, bottom].
+# Link previews (LinkedIn, Slack...) always use the full, uncropped photo.
+photo_crop: [0.32, 0, 0.92, 1]        # tall crop for the Home and About pages
+avatar_crop: [0.55, 0.30, 0.75, 0.57] # tight square around your face, for small round avatars
+email: gula7530@vandals.uidaho.edu
+cv_pdf: assets/cv_dinesh.pdf       # path inside static/
+# Your Word CV. When it's newer than the PDF above, the build re-exports the PDF with
+# Microsoft Word (on this computer only; GitHub uses the PDF you commit).
+cv_source: D:/UoI/main_cv/cv_dinesh.docx
+
+# Your name as it appears in author lists; these get bolded automatically.
+highlight_author:
+  - Gulati, D.
+
+bio: >-
+  I am a Ph.D. candidate in Water Resources at the University of Idaho, working with
+  Dr. Meetpal S. Kukal in the Agrohydrology for Global Change Lab. My dissertation develops
+  and deploys soil water budget models tailored to Idaho agroecosystems, from field-scale
+  FAO-56 simulations and eddy covariance measurements to OpenET-based consumptive use across
+  the Eastern Snake Plain Aquifer. I also build no-code tools such as
+  [FAO56-Studio](https://swb.hydroagrinexus.com/) so growers, water managers, and students
+  can run these models themselves.
+
+# Buttons under your name on the home page. Remove the "#" to enable a line.
+links:
+  - { label: Email, icon: fa-solid fa-envelope, url: "mailto:gula7530@vandals.uidaho.edu" }
+  - { label: CV, icon: fa-solid fa-file-lines, url: /cv }
+  - { label: LinkedIn, icon: fa-brands fa-linkedin, url: "https://www.linkedin.com/in/dinesh-gulati/" }
+  - { label: GitHub, icon: fa-brands fa-github, url: "https://github.com/dineshgulati933" }
+  - { label: Google Scholar, icon: fa-brands fa-google-scholar, url: "https://scholar.google.com/citations?user=g_QBa2kAAAAJ" }
+  - { label: ORCID, icon: fa-brands fa-orcid, url: "https://orcid.org/0009-0009-8264-1912" }
+
+interests:
+  - title: Soil water budgeting
+    icon: fa-solid fa-droplet
+    text: >-
+      FAO-56 dual crop coefficient models and contributions to the open-source
+      pyfao56 package, recipient of the Irrigation Association's 2025 Vanguard Award.
+  - title: Remote sensing and consumptive use
+    icon: fa-solid fa-satellite
+    text: >-
+      Google Earth Engine workflows with OpenET, gridMET, and soils data to quantify
+      consumptive water use from field to water-entity scales across the Eastern Snake Plain.
+  - title: Climate-smart agriculture
+    icon: fa-solid fa-seedling
+    text: >-
+      How soil organic carbon gains and conservation practices change agrohydrological
+      outcomes across soils, climates, and irrigation management.
+  - title: Scientific software
+    icon: fa-solid fa-code
+    text: >-
+      Interactive web tools for agricultural water management, including FAO56-Studio
+      and the SnakeFlux eddy covariance cooperator portal.
+
+# Top navigation, in order.
+nav:
+  - { label: Home, url: / }
+  - { label: Publications, url: /publications }
+  - { label: Presentations, url: /presentations }
+  - { label: Software, url: /software }
+  - { label: CV, url: /cv }
+  - { label: About, url: /about }
+
+home:
+  news_count: 6          # how many news items to show on the home page

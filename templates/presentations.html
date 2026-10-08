@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_macros.html" import event_card %}
+{% block title %}Presentations · {{ site.name }}{% endblock %}
+{% block description %}Conference talks and posters by {{ site.name }}.{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    <h1>Talks &amp; posters</h1>
+    <p class="lead">Conference presentations, grouped by meeting. Posters have their own page with a full-resolution download.</p>
+    <dl class="stats">
+      <div><dt>Presentations</dt><dd>{{ talk_stats.total }}</dd></div>
+      <div><dt>Oral</dt><dd>{{ talk_stats.by_type.oral + talk_stats.by_type.invited }}</dd></div>
+      <div><dt>Posters</dt><dd>{{ talk_stats.by_type.poster }}</dd></div>
+      <div><dt>Meetings</dt><dd>{{ talk_stats.meetings }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container narrow">
+    <div class="filter-bar" data-filter-bar hidden>
+      <span class="filter-label">Show</span>
+      <button type="button" data-filter="all" aria-pressed="true">All <span>{{ talk_stats.total }}</span></button>
+      {% for key, label in [('oral', 'Oral'), ('poster', 'Posters'), ('invited', 'Invited'), ('seminar', 'Seminars'), ('workshop', 'Workshops'), ('panel', 'Panels')] %}
+      {% if talk_stats.by_type[key] %}<button type="button" data-filter="{{ key }}" aria-pressed="false">{{ label }} <span>{{ talk_stats.by_type[key] }}</span></button>{% endif %}
+      {% endfor %}
+      {% if talk_stats.with_poster %}<button type="button" data-filter="has-poster" aria-pressed="false">Poster available <span>{{ talk_stats.with_poster }}</span></button>{% endif %}
+      {% if talk_stats.coauthor %}<button type="button" data-filter="coauthor" aria-pressed="false">Co-author presented <span>{{ talk_stats.coauthor }}</span></button>{% endif %}
+    </div>
+
+    {% for year, events_in_year in talk_years %}
+    <div class="year-group" data-year>
+      <h2 class="year">{{ year }}</h2>
+      {% for ev in events_in_year %}{{ event_card(ev) }}{% endfor %}
+    </div>
+    {% endfor %}
+    <p class="empty-note" data-filter-empty hidden>Nothing matches this filter.</p>
+  </div>
+</section>
+{% endblock %}

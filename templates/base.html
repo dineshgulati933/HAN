@@ -1,76 +1,63 @@
+{% set current = '/presentations' if page_url.startswith('/conf/') else page_url %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}HydroAgriNexus{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site.name }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+  <link rel="canonical" href="{{ site.url.rstrip('/') }}{{ page_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ self.title() }}">
+  <meta property="og:description" content="{{ self.description() }}">
+  <meta property="og:url" content="{{ site.url.rstrip('/') }}{{ page_url }}">
+  {% block og_image %}{% if site.og_image %}<meta property="og:image" content="{{ site.url.rstrip('/') }}{{ site.og_image }}">{% endif %}{% endblock %}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a6c86">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/site.css?v={{ build_id }}">
+  {% if jsonld %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endif %}
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">HydroAgriNexus</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cv">CV</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Python Apps
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="appsDropdown">
-                            <li><a class="dropdown-item" href="https://dinesh933.pythonanywhere.com/approach1_params" target="_blank">SWB-SOC</a></li>
-                            <li><a class="dropdown-item" href="https://dinesh933.pythonanywhere.com/approach2_params" target="_blank">SWB-SOC-CPS</a></li>
-                            <li><a class="dropdown-item" href="https://fieldsync.pythonanywhere.com/" target="_blank">SnakeFlux</a></li>
-                            <li><a class="dropdown-item" href="https://swb.hydroagrinexus.com/" target="_blank">FAO56-Studio</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container mt-4">
-        {% block content %}{% endblock %}
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">{{ site.name }}</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        {% for item in site.nav %}
+        <a href="{{ item.url }}"{% if item.url == current %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+      </nav>
     </div>
-    <footer class="bg-primary text-white text-center py-3">
-        <p>More Crops with Each Drop</p>
-        <div class="d-flex justify-content-center mt-2">
-            <!-- Satellite -->
-            <div class="mx-3">
-                <i class="fas fa-satellite fa-2x"></i>
-                <!-- <p>Satellite</p> -->
-            </div>
-            <!-- Water Droplet -->
-            <div class="mx-3">
-                <i class="fas fa-tint fa-2x"></i>
-                <!-- <p>Water</p> -->
-            </div>
-            <!-- Plant -->
-            <div class="mx-3">
-                <i class="fas fa-seedling fa-2x"></i>
-                <!-- <p>Plant</p> -->
-            </div>
-            <!-- Soil -->
-            <!-- <div class="mx-3">
-                <i class="fas fa-leaf fa-2x"></i> -->
-                <!-- <p>Soil</p> -->
-            <!-- </div> -->
+  </header>
 
-        </div>
-        <p>&copy; 2025 HydroAgriNexus | All rights reserved</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-icons" aria-hidden="true">
+          <i class="fa-solid fa-satellite"></i><i class="fa-solid fa-droplet"></i><i class="fa-solid fa-seedling"></i>
+        </span>
+        <span>{{ site.brand }} · {{ site.tagline }}</span>
+      </div>
+      <div class="footer-meta">
+        © {{ year }} {{ site.name }} · Updated {{ updated }}
+      </div>
+    </div>
+  </footer>
+  <script src="/static/js/site.js?v={{ build_id }}" defer></script>
 </body>
 </html>

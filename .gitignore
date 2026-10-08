@@ -22,9 +22,10 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Build directory is committed for GitHub Pages
-# but you can uncomment this if deploying differently
-# build/
+# Generated site and image cache (GitHub Actions builds and deploys the site)
+_site/
+.cache/
+build/
 
 # Logs
 *.log
@@ -37,3 +38,6 @@ htmlcov/
 # Local development
 .env
 .flaskenv
+
+# Local preview config for the Claude app (machine-specific Python path)
+.claude/launch.json

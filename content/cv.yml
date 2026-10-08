@@ -1,0 +1,108 @@
+# ---------------------------------------------------------------------------
+# CV page sections. Publications and presentations are pulled in automatically
+# from publications.yml and presentations.yml — don't repeat them here.
+# ---------------------------------------------------------------------------
+
+education:
+  - degree: Ph.D. in Water Resources
+    institution: University of Idaho
+    dates: 2023 – present
+    details:
+      - "Dissertation: *Development and deployment of soil water budget models tailored for Idaho agroecosystems and their applications*"
+      - "Advisor: Dr. Meetpal S. Kukal"
+      - "GPA: 4.00"
+  - degree: M.Tech. in Soil and Water Engineering
+    institution: Punjab Agricultural University
+    location: Ludhiana, India
+    dates: 2018 – 2021
+    details:
+      - "Thesis: *Simulation of groundwater recharge from transplanted and direct seeded rice fields*"
+      - "Advisor: Dr. Sanjay Satpute"
+      - "GPA: 3.32"
+  - degree: B.Tech. in Agricultural Engineering
+    institution: Punjab Agricultural University
+    location: Ludhiana, India
+    dates: 2014 – 2018
+    details:
+      - "Project: *Comparative field evaluation of different straw management technologies in combine harvested paddy fields under different straw conditions*"
+      - "Advisor: Dr. M. K. Narang"
+      - "GPA: 3.22"
+
+experience:
+  - title: Graduate Research Assistant
+    org: Department of Soil and Water Systems, University of Idaho
+    dates: Aug 2024 – present
+    bullets:
+      - Developed a Google Earth Engine routine to obtain and analyze OpenET, gridMET, and soils data for the Eastern Snake Plain Aquifer.
+      - Contributed to the pyfao56 open-source evapotranspiration and water balance tool (Irrigation Association Vanguard Award).
+      - Contributed to developing a Python model for quantifying evapotranspiration of applied water.
+      - Assessed soil organic carbon gain impacts on agrohydrological processes across soils, climates, and irrigation practices.
+      - Built [SnakeFlux](https://fieldsync.pythonanywhere.com/), a Flask-based cooperator portal that automates eddy covariance data delivery and visualization.
+      - Built [FAO56-Studio](https://swb.hydroagrinexus.com/), an interactive no-code platform to simulate FAO-56 based soil water budgets.
+      - Analyzed eddy covariance energy balance closure and flux footprints using the flux-data-qaqc and fluxfootprints packages.
+  - title: Summer Research Assistant, IWRRI
+    org: University of Idaho
+    dates: Jun – Aug 2025
+    bullets:
+      - Conducted an initial hydrological assessment of the Portneuf Watershed for IWRRI.
+      - Analyzed gridMET, PRISM, OpenET, USDA CDL, NLCD, and IrrMapper datasets in Google Earth Engine using the JavaScript and Python APIs.
+  - title: Graduate Research Assistant
+    org: Department of Agricultural and Biological Engineering, The Pennsylvania State University
+    dates: Aug 2023 – Aug 2024
+    bullets:
+      - Contributed to the pyfao56 open-source evapotranspiration and water balance tool.
+      - Developed a machine learning model that enables the use of NOAA reference ET forecasts in the Western U.S.
+      - Assessed soil organic carbon gain impacts on agrohydrological processes across soils, climates, and irrigation practices.
+  - title: Senior Research Fellow
+    org: Department of Soil Science, Punjab Agricultural University
+    dates: May 2021 – May 2022
+    bullets:
+      - Planned and managed field experiments under microirrigation systems.
+      - Developed low-cost, microcontroller-based sensors to observe climate and agricultural parameters for under $50.
+      - Supported Ph.D. and master's students with research and taught practical classes for bachelor's students.
+  - title: Master's Research
+    org: Department of Soil and Water Engineering, Punjab Agricultural University
+    dates: Aug 2018 – Apr 2021
+    bullets:
+      - Conducted field experiments for direct-seeded and transplanted rice.
+      - Collected and analyzed soil moisture data using Delta PR2 probes.
+      - Estimated and compared groundwater recharge using HYDRUS-1D simulations.
+
+grants:
+  - title: "Beyond flux towers: evaluating ET models for irrigation decisions using soil water depletion as a validation target"
+    funder: METER Group
+    year: 2026
+    amount: $10,000 in instruments
+  - title: "Understanding consumptive use on the ESPA: Data gaps, uncertainty, and impacts"
+    funder: IWRRI, 2025 Idaho Water Research Priorities
+    year: 2025
+    amount: $44,870
+    pi: Meetpal Kukal
+    role: Key personnel
+  - title: Hydrologic modelling and data provisioning for development of a dairy water footprint tool for the Western U.S.
+    funder: Dairy Management Inc.
+    amount: $86,875
+    pi: Meetpal Kukal
+    role: Key personnel
+
+awards:
+  - { year: 2026, name: Grant A. Harris Fellowship, org: METER Group, note: "$10,000 in instruments" }
+  - { year: 2025, name: Vanguard Award to pyfao56, org: Irrigation Association }
+  - { year: 2025, name: Joseph Jordan Student Research Fellowship, org: IWRRI, note: "$3,500" }
+  - { year: 2024, name: Whiting Water Resources Scholarship, org: University of Idaho, note: "$1,000" }
+  - { year: 2024, name: Irrigation E3 Learner, org: Irrigation Association }
+  - { year: 2022, name: Best M.Tech. Thesis in Agricultural Engineering, org: ISTE National Award }
+  - { year: 2021, name: Dr. S. D. Khepar Gold Medal, org: Punjab Agricultural University }
+  - { name: Merit scholarships during B.Tech. and M.Tech. studies, org: Punjab Agricultural University }
+
+development:
+  - Three-day APSIM workshop on crop management simulation, Iowa State University
+  - Deep Learning Specialization, deeplearning.ai (Coursera)
+  - Machine Learning with Python and Fundamentals of R Programming (Udemy)
+  - IoT workshop on precision farming, NCPAH, Ministry of Agriculture, India
+
+skills:
+  - { label: Programming, items: "Python (data analysis, machine learning, Flask), R, JavaScript (Google Earth Engine)" }
+  - { label: Modeling, items: "FAO-56 / pyfao56, HYDRUS-1D, APSIM, CROPWAT" }
+  - { label: Data & GIS, items: "Google Earth Engine, OpenET, gridMET, PRISM, ArcGIS, eddy covariance (flux-data-qaqc)" }
+  - { label: Hardware, items: "Arduino, NodeMCU, Raspberry Pi, low-cost environmental sensors" }

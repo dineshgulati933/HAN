@@ -1,0 +1,161 @@
+# ---------------------------------------------------------------------------
+# Talks and posters, grouped by meeting. Newest first is easiest to read, but
+# order doesn't matter — the site sorts by date.
+#
+# MEETING fields
+#   name:      full meeting name                                  (required)
+#   short:     short label, used for the anchor link, e.g. "ASABE AIM 2026"
+#   date:      first day, YYYY-MM-DD                               (required)
+#   end:       last day, if it's a multi-day meeting
+#   location:  City, ST                                            (required)
+#   venue:     building / hotel (optional)
+#   url:       meeting website (optional)
+#
+# TALK fields (one entry per talk or poster under "talks:")
+#   title:     (required)
+#   type:      oral | poster | invited | seminar | workshop | panel  (required)
+#   date:      defaults to the meeting's first day
+#   presenter: leave out if you presented. Otherwise write the name, e.g.
+#              "Dr. Meetpal S. Kukal" -> shows "Presented by ..." and a co-author tag
+#   authors:   optional author list, e.g. "Gulati, D., & Kukal, M. S."
+#   poster:    poster file inside static/, e.g. posters/asabe26.png (png/jpg/pdf)
+#              -> adds a thumbnail, a "View poster" button, and its own page
+#   slug:      the poster page's address: /conf/<slug>. Set it BEFORE you print a
+#              QR code and never change it afterwards.
+#   slides:    link or file inside static/ (optional)
+#   abstract:  short paragraph, shown on the poster page (optional)
+#   links:     extra buttons, e.g. - { label: Try FAO56-Studio, url: https://... }
+# ---------------------------------------------------------------------------
+
+- name: ASABE Annual International Meeting
+  short: ASABE AIM 2026
+  date: 2026-07-12
+  end: 2026-07-15
+  location: Indianapolis, IN
+  venue: JW Marriott Indianapolis
+  talks:
+    - title: Assimilation of in-situ soil moisture to constrain FAO-56 crop evapotranspiration in water-limited environments
+      type: oral
+      date: 2026-07-14
+    - title: Quantifying the water footprint of U.S. dairy feed across the CONUS
+      type: poster
+      date: 2026-07-14
+      authors: Gulati, D., Afshar, R. K., Purdy, A. J., Fishman, R., & Kukal, M. S.
+      poster: posters/asabe26.png
+      slug: asabe26
+    - title: "FAO56-Studio: An interactive, no-code online platform for simulating FAO-56 based soil water budgets"
+      type: oral
+      date: 2026-07-15
+      links:
+        - { label: Try FAO56-Studio, url: "https://swb.hydroagrinexus.com/" }
+
+- name: Idaho Water Quality Workshop
+  short: IWQW 2026
+  date: 2026-03-03
+  end: 2026-03-04
+  location: Boise, ID
+  talks:
+    - title: Evaluating feasibility of deficit irrigation in Idaho's Magic Valley
+      type: poster
+      authors: Gulati, D., & Kukal, M. S.
+      poster: posters/iwqw26_deficit_irrigation.png
+      slug: wqw26
+      links:
+        - { label: Try FAO56-Studio, url: "https://swb.hydroagrinexus.com/" }
+
+- name: Idaho Potato Conference
+  short: Idaho Potato Conference 2026
+  date: 2026-01-21
+  location: Pocatello, ID
+  talks:
+    - title: "Revisiting potato evapotranspiration: Findings from continuous flux measurements in a commercial production field"
+      type: oral
+      presenter: Dr. Meetpal S. Kukal
+
+- name: CANVAS 2025 (ASA, CSSA, SSSA Annual Meeting)
+  short: CANVAS 2025
+  date: 2025-11-11
+  location: Salt Lake City, UT
+  talks:
+    - title: Increased water retention from soil carbon gain is insufficient to result in a tangible positive change in agricultural water budgets
+      type: oral
+    - title: Assimilation of in-situ soil moisture to constrain FAO-56 crop evapotranspiration in water-limited environments
+      type: oral
+
+- name: Pacific Northwest Water Summit
+  short: PNW Water Summit 2025
+  date: 2025-11-04
+  location: Boise, ID
+  talks:
+    - title: Consumptive use & crop yield response to irrigation demand management in Idaho's Magic Valley
+      type: poster
+      authors: Gulati, D., & Kukal, M. S.
+      poster: posters/pnw25_consumptive_use.png
+      slug: pnw_ws24            # legacy address — already in use, keep as is
+      links:
+        - { label: Try FAO56-Studio, url: "https://swb.hydroagrinexus.com/" }
+
+- name: ASABE/CSABE Annual International Meeting
+  short: ASABE AIM 2025
+  date: 2025-07-14
+  end: 2025-07-15
+  location: Toronto, Ontario, Canada
+  talks:
+    - title: Tracking evapotranspiration of applied water and effective precipitation by color-coding standardized soil water budgets
+      type: oral
+      date: 2025-07-14
+    - title: Increased water retention from soil carbon gain is insufficient to result in a tangible positive change in agricultural water budgets
+      type: oral
+      date: 2025-07-15
+    - title: Deploying OpenET to access consumptive use from field to water entity scales across Eastern Snake Plain Aquifer
+      type: oral
+      date: 2025-07-15
+
+- name: Idaho Water Quality Workshop
+  short: IWQW 2025
+  date: 2025-03-03
+  location: Boise, ID
+  talks:
+    - title: How NRCS conservation practice standards impact agricultural water budgets?
+      type: poster
+      authors: Gulati, D., & Kukal, M. S.
+      poster: posters/iwqw25_nrcs_practices.png
+      slug: wqw
+      links:
+        - { label: Try the NRCS CPS-based SWB model, url: "https://dinesh933.pythonanywhere.com/approach2_params" }
+
+- name: ASA, CSSA, SSSA International Annual Meeting
+  short: ASA-CSSA-SSSA 2024
+  date: 2024-11-11
+  location: San Antonio, TX
+  talks:
+    - title: Hydrological losses under increased soil organic carbon and weather variability in different soil textures
+      type: oral
+    - title: How does improving soil structure impact crop evapotranspiration and water stress across soil textures and aridity?
+      type: oral
+
+- name: ASABE Annual International Meeting
+  short: ASABE AIM 2024
+  date: 2024-07-29
+  end: 2024-07-30
+  location: Anaheim, CA
+  talks:
+    - title: Climatic and seasonal variation in ETr to ETo ratios calculated using ASCE standardized Penman-Monteith across the contiguous U.S.
+      type: poster
+      date: 2024-07-29
+    - title: Translating soil carbon sequestration into agrohydrological outcomes across a spectrum of aridity and soil texture
+      type: oral
+      date: 2024-07-30
+
+- name: Northeast Agricultural & Biological Engineering Conference (NABEC)
+  short: NABEC 2024
+  date: 2024-07-15
+  end: 2024-07-16
+  location: State College, PA
+  talks:
+    - title: Climatic and seasonal variation in ETr to ETo ratios calculated using ASCE standardized Penman-Monteith across the contiguous U.S.
+      type: poster
+      date: 2024-07-15
+    - title: Translating soil carbon sequestration into agrohydrological outcomes across a spectrum of aridity and soil texture
+      type: oral
+      date: 2024-07-16

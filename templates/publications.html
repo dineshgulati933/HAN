@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pub_item %}
+{% block title %}Publications · {{ site.name }}{% endblock %}
+{% block description %}Peer-reviewed publications by {{ site.name }} on soil water budgets, evapotranspiration, and agricultural water management.{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    <h1>Publications</h1>
+    <p class="lead">Peer-reviewed articles and software papers. {{ pubs|length }} total.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container narrow">
+    {% for year, items in pubs|groupby('year')|reverse %}
+    <div class="year-group">
+      <h2 class="year">{{ year }}</h2>
+      <ul class="pubs">
+        {% for pub in items|sort(attribute='_order') %}{{ pub_item(pub) }}{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
