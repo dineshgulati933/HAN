@@ -27,6 +27,18 @@
 #   links:     extra buttons, e.g. - { label: Try FAO56-Studio, url: https://... }
 # ---------------------------------------------------------------------------
 
+- name: OpenET Applications Conference
+  short: OpenET Conference 2026
+  date: 2026-11-17
+  end: 2026-11-18
+  location: Salt Lake City, UT
+  venue: Hyatt Regency Salt Lake City
+  talks:
+    - title: Assessing realism of soil water balance estimates of ET using OpenET in Idaho
+      type: poster
+      date: 2026-11-17
+      slug: openet26            # QR code target; attach the poster file here later
+
 - name: ASABE Annual International Meeting
   short: ASABE AIM 2026
   date: 2026-07-12
