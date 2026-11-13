@@ -20,6 +20,18 @@
   tags: [FAO-56, Evapotranspiration, Web app]
   featured: true
 
+- name: Irrigation Trigger Tool
+  role: Developer
+  icon: fa-solid fa-faucet-drip
+  description: >-
+    Finds the soil-moisture level at which to irrigate, for any field in the contiguous
+    United States. Pick a point on the map and a crop; the tool reads field capacity and
+    wilting point from the USDA soil survey (SSURGO) and returns the irrigation trigger,
+    with a one-page PDF report.
+  url: https://triggers.hydroagrinexus.com
+  tags: [Beta, Irrigation scheduling, Soil moisture, SSURGO]
+  featured: true
+
 - name: pyfao56
   role: Contributor
   icon: fa-brands fa-python
@@ -29,7 +41,6 @@
   repo: https://github.com/kthorp/pyfao56
   paper: 10.1016/j.softx.2025.102109
   tags: [Python, FAO-56, Open source]
-  featured: true
 
 - name: SnakeFlux
   role: Developer
