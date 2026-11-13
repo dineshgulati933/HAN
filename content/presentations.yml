@@ -34,10 +34,13 @@
   location: Salt Lake City, UT
   venue: Hyatt Regency Salt Lake City
   talks:
-    - title: Assessing realism of soil water balance estimates of ET using OpenET in Idaho
+    - title: Assessing impacts of a priori crop coefficient curves and management assumptions in the dual crop coefficient approach using field-specific OpenET estimates
       type: poster
       date: 2026-11-17
-      slug: openet26            # QR code target; attach the poster file here later
+      authors: Gulati, D., & Kukal, M. S.
+      poster: posters/openet26_kc_management.pdf
+      poster_preview: posters/openet26_kc_management.png
+      slug: openet26            # printed QR code points here; never change
 
 - name: ASABE Annual International Meeting
   short: ASABE AIM 2026
