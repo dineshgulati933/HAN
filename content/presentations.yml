@@ -52,15 +52,17 @@
     - title: Assimilation of in-situ soil moisture to constrain FAO-56 crop evapotranspiration in water-limited environments
       type: oral
       date: 2026-07-14
+      authors: Gulati, D., & Kukal, M. S.
     - title: Quantifying the water footprint of U.S. dairy feed across the CONUS
       type: poster
       date: 2026-07-14
-      authors: Gulati, D., Afshar, R. K., Purdy, A. J., Fishman, R., & Kukal, M. S.
+      authors: Gulati, D., Keshavarz Afshar, R., Purdy, A. J., Fishman, R., & Kukal, M. S.
       poster: posters/asabe26.png
       slug: asabe26
     - title: "FAO56-Studio: An interactive, no-code online platform for simulating FAO-56 based soil water budgets"
       type: oral
       date: 2026-07-15
+      authors: Gulati, D., & Kukal, M. S.
       links:
         - { label: Try FAO56-Studio, url: "https://swb.hydroagrinexus.com/" }
 
