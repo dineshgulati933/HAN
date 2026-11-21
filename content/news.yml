@@ -5,6 +5,12 @@
 # The newest items appear first; site.yml -> home.news_count controls how many.
 # ---------------------------------------------------------------------------
 
+- date: 2026-11
+  text: >-
+    Presented a poster at the **OpenET Applications Conference** in Salt Lake City, testing
+    a priori crop coefficient curves and management assumptions in the FAO-56 dual crop
+    coefficient approach against field-specific OpenET estimates. [View poster](/conf/openet26).
+
 - date: 2026-07
   text: >-
     Presented two talks and a poster at the **ASABE Annual International Meeting** in
